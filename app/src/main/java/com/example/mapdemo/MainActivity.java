@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        System.out.println("点击了头像");
         switch (v.getId()){
             case R.id.ll_01:
                 Intent i = new Intent(this,MessageActivity.class);
@@ -61,6 +60,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tv_search_group:
                 Intent i2 = new Intent(this,SearchActivity.class);
                 startActivity(i2);
+                break;
+            case -1:
+                Intent i3 = new Intent(this,DetailActivity.class);
+                startActivity(i3);
                 break;
         }
     }
